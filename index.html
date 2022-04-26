@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcular(){
+            var nota1=media.n1.value;
+            var nota2=media.n2.value;
+            var calc_media=(parseFloat(nota1)+parseFloat(nota2))/2;
+            var nome=media.nome.value;
+            var disciplina=media.disciplina.value;
+
+            if (calc_media<=3) {
+                alert(nome+", "+"você foi reprovado na disciplina "+disciplina+" com média "+calc_media);
+            } else if (calc_media>3 && calc_media<7 ) {
+                alert(nome+", "+"você está de Recuperação na disciplina "+disciplina+" com média "+calc_media);
+            }else if(calc_media>=7){
+                alert(nome+", "+"você foi aprovado na disciplina "+disciplina+" com média "+calc_media);
+
+            }else
+            alert("Ensira uma nota valida!");
+            
+        }
+    </script>
+</head>
+<body>
+    <form name="media" action="">
+        <h1>Calcule sua média!</h1><br>
+        <label for="">Seu nome</label><br>
+        <input name="nome" type="text"><br>
+        <label for="">Disciplina</label><br>
+        <input name="disciplina" type="text"><br>
+        <label for="">Nota 1</label><br>
+        <input name="n1" type="text"><br>
+        <label for="">Nota 2</label><br>
+        <input name="n2" type="text"><br>
+        <input onclick="calcular()" type="button" value="Calcular">
+
+
+    </form>
+</body>
+</html>
